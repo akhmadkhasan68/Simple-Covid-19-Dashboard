@@ -67,7 +67,11 @@ class _HomeState extends State<Home> {
                         if (snapshot.connectionState ==
                             ConnectionState.waiting) {
                           return Center(
-                            child: CircularProgressIndicator(),
+                            child: CircularProgressIndicator(
+                              backgroundColor: mainColor,
+                              valueColor: new AlwaysStoppedAnimation<Color>(
+                                  secondaryColor),
+                            ),
                           );
                         } else if (snapshot.hasError) {
                           return Text("Error");
@@ -138,7 +142,11 @@ class _HomeState extends State<Home> {
                           if (snapshot.connectionState ==
                               ConnectionState.waiting) {
                             return Center(
-                              child: CircularProgressIndicator(),
+                              child: CircularProgressIndicator(
+                                backgroundColor: mainColor,
+                                valueColor: new AlwaysStoppedAnimation<Color>(
+                                    secondaryColor),
+                              ),
                             );
                           } else if (snapshot.hasError) {
                             return Text("Error");
@@ -177,7 +185,11 @@ class _HomeState extends State<Home> {
                             if (snapshot.connectionState ==
                                 ConnectionState.waiting) {
                               return Center(
-                                child: CircularProgressIndicator(),
+                                child: CircularProgressIndicator(
+                                  backgroundColor: mainColor,
+                                  valueColor: new AlwaysStoppedAnimation<Color>(
+                                      secondaryColor),
+                                ),
                               );
                             } else if (snapshot.hasError) {
                               return Text("Error");
